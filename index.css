@@ -1,13 +1,20 @@
 /* --- General Setup & Variables --- */
 :root {
-    --bg-color: #0d1117;
-    --primary-text-color: #c9d1d9;
-    --secondary-text-color: #8b949e;
-    --accent-color: #FFC700;
-    --border-color: #30363d;
-    --card-bg-color: #161b22;
+    --bg-color: #0A192F; /* Darker, more professional blue-black */
+    --primary-text-color: #CCD6F6; /* Light gray */
+    --secondary-text-color: #8892B0; /* Muted gray */
+    --accent-color: #64FFDA; /* Bright, fresh teal/mint */
+    --accent-color-rgb: 100, 255, 218; /* For rgba use */
+    --accent-hover-bg: rgba(100, 255, 218, 0.1); /* Subtle hover background */
+    --border-color: #233554; /* Slightly lighter border */
+    --card-bg-color: #112240; /* Slightly lighter card background */
+    --nav-bg-color: rgba(10, 25, 47, 0.9); /* Opaque navbar base */
+
     --font-primary: 'Poppins', sans-serif;
+    --font-heading: 'Montserrat', sans-serif; /* New heading font */
     --font-mono: 'Fira Code', monospace;
+
+    --transition-speed: 0.3s ease-in-out;
 }
 
 * {
@@ -25,41 +32,80 @@ body {
     background-color: var(--bg-color);
     color: var(--primary-text-color);
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px; /* Slightly wider container */
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Reduced padding for more edge space on larger screens */
 }
 
 h1, h2, h3, h4 {
-    font-weight: 600;
+    font-family: var(--font-heading); /* Apply new heading font */
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+    color: var(--primary-text-color);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--primary-text-color);
     margin-bottom: 3rem;
-    text-align: center;
 }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem; /* More space */
+    position: relative;
+    padding-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
 
 .accent-text {
     color: var(--accent-color);
     font-family: var(--font-mono);
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin-right: 0.5rem;
+    font-weight: 400; /* Lighter for minimal look */
 }
 
 section {
-    padding: 6rem 0;
+    padding: 8rem 0; /* More vertical padding */
 }
 
 ul {
     list-style: none;
 }
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: var(--transition-speed);
+}
+a:hover {
+    color: rgba(var(--accent-color-rgb), 0.8);
+}
+
 
 /* --- Navigation Bar --- */
 .navbar {
@@ -67,111 +113,279 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(13, 17, 23, 0.85);
+    background-color: var(--nav-bg-color);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    height: 90px; /* Taller navbar */
+    display: flex; /* Ensure content is centered vertically */
+    align-items: center;
+    transition: height var(--transition-speed), background-color var(--transition-speed);
+}
+
+.navbar.scrolled {
+    height: 70px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    width: 100%; /* Ensure container fills navbar */
 }
 
 .nav-logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Larger logo */
     font-weight: 700;
-    color: var(--primary-text-color);
+    color: var(--accent-color); /* Logo in accent color */
     text-decoration: none;
+    font-family: var(--font-heading);
+}
+
+.logo-dot {
+    color: var(--primary-text-color); /* Dot in primary color */
 }
 
 .nav-menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* More spacing */
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
 }
 
 .nav-menu a {
     color: var(--primary-text-color);
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 0.95rem; /* Slightly smaller for minimalism */
+    font-family: var(--font-mono); /* Menu items in mono font */
+    padding: 0.5rem 0;
+    transition: var(--transition-speed);
 }
 
 .nav-menu a:hover {
     color: var(--accent-color);
 }
 
+.nav-number {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    text-align: center;
+    transition: var(--transition-speed);
+    cursor: pointer;
+}
+.nav-button:hover {
+    background-color: var(--accent-hover-bg);
+    color: var(--accent-color); /* Keep accent color */
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    gap: 6px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
 /* --- Hero Section --- */
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
-    text-align: center;
+    text-align: left;
     min-height: 100vh;
-    padding-top: 70px; /* Offset for fixed navbar */
+    padding-top: 90px; /* Offset for fixed navbar */
+    padding-left: 10vw; /* Push content from left edge */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.intro-text {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--primary-text-color);
 }
 
-.waving-hand {
-    margin-bottom: -1rem;
+.sub-heading {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .typing-svg {
-    max-width: 100%;
+    max-width: 480px; /* Control max width */
     height: auto;
+    margin-bottom: 2rem;
 }
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.primary-btn {
+    background-color: var(--accent-hover-bg); /* Use a more subtle background */
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 1rem 1.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    transition: var(--transition-speed);
+}
+.primary-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(var(--accent-color-rgb), 0.5); /* Subtle glow */
+}
+
 
 /* --- About Section --- */
 .about-section h2 {
-    text-align: left;
+    text-align: center;
 }
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 3fr 2fr; /* Text wider than image */
+    gap: 4rem; /* More space */
+    align-items: flex-start; /* Align top */
+    margin-bottom: 4rem;
 }
 
 .about-text p {
     font-size: 1.1rem;
     color: var(--secondary-text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
 }
 
-.about-status ul {
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* For a square image aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--accent-hover-bg); /* Placeholder bg */
+}
+
+.about-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1) brightness(90%); /* Desaturated and slightly darker */
+    transition: filter var(--transition-speed);
+    mix-blend-mode: multiply; /* Blends nicely with the accent-hover-bg */
+}
+
+.about-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    z-index: -1;
+    transition: all var(--transition-speed);
+}
+
+.about-image-wrapper:hover .about-image {
+    filter: grayscale(0%) contrast(1.2) brightness(100%); /* Color on hover */
+    mix-blend-mode: normal;
+}
+
+.about-image-wrapper:hover::after {
+    top: 10px;
+    left: 10px;
+}
+
+
+.about-status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.status-item {
     background-color: var(--card-bg-color);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
-}
-
-.about-status li {
-    margin-bottom: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    color: var(--secondary-text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.about-status li:last-child {
-    margin-bottom: 0;
+.status-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(var(--accent-color-rgb), 0.1);
 }
 
-.about-status .icon {
-    margin-right: 1rem;
-    font-size: 1.2rem;
+.status-item strong {
+    color: var(--primary-text-color);
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
 }
+
+.status-item svg { /* Feather icons */
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+    width: 24px;
+    height: 24px;
+}
+
 
 /* --- Projects Section --- */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem; /* Slightly reduced gap */
 }
 
 .project-card {
@@ -182,190 +396,12 @@ ul {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default; /* Indicate it's a card, not just a link */
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-7px); /* More pronounced lift */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Darker, more spread shadow */
 }
 
-.project-card h3 {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-}
-
-.project-description {
-    color: var(--secondary-text-color);
-    margin-bottom: 0.5rem;
-}
-.project-description strong {
-    color: var(--primary-text-color);
-}
-.feature-list {
-    color: var(--secondary-text-color);
-    padding-left: 1.2rem;
-    margin-top: 0.5rem;
-}
-.feature-list li {
-    list-style-type: '✓  ';
-    padding-left: 0.5rem;
-    margin-bottom: 0.25rem;
-}
-
-.project-status {
-    margin: 1rem 0;
-}
-
-.project-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1.5rem 0;
-}
-
-.project-stack span {
-    background-color: #21262d;
-    color: var(--accent-color);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-family: var(--font-mono);
-}
-
-.project-links {
-    margin-top: auto; /* Aligns to the bottom */
-}
-
-.btn {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
-.btn-disabled {
-    background-color: var(--border-color);
-    border-color: var(--border-color);
-    color: var(--secondary-text-color);
-    cursor: not-allowed;
-}
-.btn-disabled:hover {
-    background-color: var(--border-color);
-    color: var(--secondary-text-color);
-}
-
-/* --- Skills Section --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.skill-category {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--border-color);
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-}
-
-.skill-category h4 {
-    font-size: 1.2rem;
-    color: var(--primary-text-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-.skill-description {
-    color: var(--secondary-text-color);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-}
-
-.skill-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding-top: 1rem;
-}
-
-/* --- Contact Section --- */
-.contact-section {
-    text-align: center;
-}
-
-.contact-section p {
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-    color: var(--secondary-text-color);
-    font-size: 1.1rem;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.contact-links img {
-    height: 30px; /* Taller badges for contact */
-    transition: transform 0.3s ease;
-}
-.contact-links a:hover img {
-    transform: scale(1.1);
-}
-
-/* --- Footer --- */
-footer {
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
-    color: var(--secondary-text-color);
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
-    h2 { font-size: 2rem; }
-    .accent-text { font-size: 1.5rem; }
-
-    .nav-menu {
-        /* In a real project, you'd implement a JS-based hamburger menu here */
-        display: none; 
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    .typing-svg {
-        width: 90%;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .nav-logo { font-size: 1.2rem; }
-}
+.project-
