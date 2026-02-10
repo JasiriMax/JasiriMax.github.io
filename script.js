@@ -25,7 +25,7 @@ const commands = {
     'about': 'Max Ochieng. Physics/Chemistry Teacher & Volleyball Coach turned Developer. <br> Trained by PLP & Safaricom S-Hook. <br> Focused on Secure Management Systems.',
     'skills': '>> Frontend: React, Tailwind, HTML/CSS <br> >> Backend: Node.js, Python, Django <br> >> Security: Ethical Hacking (Cisco), Network Scanning',
     'projects': '1. Hospital Management System (Live) <br> 2. School Management System (In Progress) <br> 3. Network Vuln Scanner (Python)',
-    'contact': 'Email: maxoundo@gmail.com',
+    'contact': 'Email: max.o.ochieng@gmail.com',
     'ls': 'about.txt  skills.json  projects_list.md  contact_info.txt', // Easter egg for techies
     'whoami': 'root@max-portfolio' // Easter egg
 };
