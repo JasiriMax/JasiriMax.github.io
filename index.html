@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Max Ochieng's Full-Stack Developer Portfolio - Building efficient and secure web applications.">
-    <title>Max Ochieng | Full-Stack & Cybersecurity Developer</title>
+    <meta name="description" content="Max Ochieng - Full-Stack Developer, Physics Teacher & Cybersecurity Enthusiast.">
+    <title>Max Ochieng | Developer & Educator</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Fonts: Montserrat (Headings), Poppins (Body), Fira Code (Terminal) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Changed font stack for a more modern, minimal feel. Poppins for body, Montserrat or Raleway for headings, and Fira Code for mono. -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Added Feather Icons for a cleaner icon set -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="nav-logo">Max Ochieng<span class="logo-dot">.</span></a> <!-- Added a dot for visual flair -->
+            <a href="#home" class="nav-logo">Max<span class="logo-dot">.</span></a>
             <ul class="nav-menu">
                 <li><a href="#about"><span class="nav-number">01.</span> About</a></li>
                 <li><a href="#projects"><span class="nav-number">02.</span> Projects</a></li>
                 <li><a href="#skills"><span class="nav-number">03.</span> Skills</a></li>
                 <li><a href="#contact"><span class="nav-number">04.</span> Contact</a></li>
-                <li><a href="/Max-Ochieng-CV.pdf" target="_blank" class="nav-button">Resume</a></li> <!-- Added a dedicated resume button -->
+                <!-- Replace with your actual CV file path -->
+                <li><a href="./Max-Ochieng.pdf" target="_blank" class="nav-button">Resume</a></li>
             </ul>
-            <div class="hamburger"> <!-- Hamburger menu for mobile -->
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,191 +38,156 @@
         <div class="hero-content">
             <p class="intro-text">Hi, my name is</p>
             <h1>Max Ochieng</h1>
-            <h2 class="sub-heading">I build robust web applications & secure digital connections.</h2>
-            <a href="https://git.io/typing-svg">
-                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=61DAFB¢er=false&vCenter=true&width=480&lines=Full+Stack+Developer;Cybersecurity+Enthusiast;MERN+Stack+Specialist;Building+RESTful+APIs" alt="My Specialties: Building Full Web Applications, Expert in Modern Web Technologies, MERN Stack Specialist, Creating Secure Digital Connections" class="typing-svg" />
-            </a>
+            <h2 class="sub-heading">Educator. Developer. Cyber Analyst.</h2>
             <p class="hero-description">
-                I'm a Full-Stack Developer passionate about crafting efficient and secure web solutions. With a background in education, I bring a unique blend of analytical thinking, clear communication, and a disciplined approach to building practical tools that solve real-world problems.
+                I am a <strong>Physics & Chemistry Teacher</strong> and <strong>Volleyball Coach</strong> turned <strong>Full-Stack Developer</strong>. Trained by the <strong>Power Learn Project (PLP)</strong> in partnership with <strong>Safaricom S-Hook</strong>, I combine analytical discipline with coding expertise to build secure, scalable management systems for schools and hospitals.
             </p>
-            <a href="#projects" class="btn primary-btn">Explore My Work</a>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">View Systems</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- About Me Section -->
+        <!-- About Me & Terminal Section -->
         <section id="about" class="about-section container">
             <h2 class="section-title"><span class="accent-text">01.</span> About Me</h2>
-            <div class="about-content">
+            <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I'm a Full-Stack Developer who builds complete, user-friendly web applications from start to finish. Think of me as a digital architect and builder—I design the user experience, construct the interface you see, and engineer the powerful engine that runs behind the scenes.
+                        My journey started in the classroom and on the volleyball court. As a teacher, I learned to break down complex concepts (like Physics and Chemistry) into understandable parts—a skill that now helps me write clean, logical code.
                     </p>
                     <p>
-                        My background as an educator and sportsman taught me the importance of clear communication, discipline, and a results-oriented mindset. I don't just write code; I build practical tools that solve real-world problems and help businesses succeed.
+                        I transitioned into tech through the rigorous <strong>PLP Software Development</strong> program (Safaricom S-Hook). I am currently expanding my security knowledge with a <strong>Cisco Ethical Hacking</strong> certification and ongoing Cybersecurity studies.
                     </p>
                     <p>
-                        Beyond the code, I'm deeply interested in cybersecurity, ensuring the solutions I build are not just functional but also resilient against threats. I believe in continuous learning and applying new technologies to create more powerful and secure digital experiences.
+                        I don't just write code; I build tools that solve administrative headaches. Whether it's a <strong>Hospital Management System</strong> or tracking student data, I focus on security, efficiency, and usability.
                     </p>
                 </div>
-                <div class="about-image-wrapper">
-                    <!-- Placeholder for an image of yourself, or a relevant tech illustration -->
-                    <img src="https://images.unsplash.com/photo-1515879252914-75df4bc72517?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Max Ochieng profile" class="about-image">
-                </div>
-            </div>
-            <div class="about-status-grid">
-                <div class="status-item">
-                    <i data-feather="monitor"></i>
-                    <strong>Currently Building:</strong> A comprehensive Hospital Management System to help healthcare providers work more efficiently.
-                </div>
-                <div class="status-item">
-                    <i data-feather="activity"></i>
-                    <strong>Always Learning:</strong> Focused on cloud technologies and advanced cybersecurity practices.
-                </div>
-                <div class="status-item">
-                    <i data-feather="briefcase"></i>
-                    <strong>Open to Collaboration:</strong> Actively seeking new projects where I can help bring innovative ideas to life.
-                </div>
-                <div class="status-item">
-                    <i data-feather="award"></i>
-                    <strong>Certifications:</strong> Cisco Certified Ethical Hacker, PLP Software Development.
+
+                <!-- Interactive Terminal -->
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">max@kali-linux:~</div>
+                    </div>
+                    <div class="terminal-window" id="terminalWindow">
+                        <div class="terminal-output" id="terminalOutput">
+                            <div class="intro-line">Welcome to MaxOS v1.0.0</div>
+                            <div class="intro-line">Type <span class="cmd-highlight">'help'</span> to see available commands.</div>
+                            <br>
+                        </div>
+                        <div class="input-line">
+                            <span class="prompt">max@portfolio:~$</span>
+                            <input type="text" id="terminalInput" autocomplete="off" autofocus>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section container">
-             <h2 class="section-title"><span class="accent-text">02.</span> My Projects</h2>
+             <h2 class="section-title"><span class="accent-text">02.</span> Featured Projects</h2>
                 <div class="project-grid">
-                    <!-- Project Card 1: HMS -->
+                    
+                    <!-- Project 1: HMS -->
                     <div class="project-card">
                         <div class="project-header">
-                            <i data-feather="folder"></i>
+                            <i data-feather="activity"></i>
                             <div class="project-links-icon">
-                                <a href="https://github.com/maxochieng" target="_blank" rel="noopener noreferrer"><i data-feather="github"></i></a>
-                                <a href="https://zionahadi.netlify.app" target="_blank" rel="noopener noreferrer"><i data-feather="external-link"></i></a>
+                                <a href="https://zionahadi.netlify.app" target="_blank" aria-label="Live Demo"><i data-feather="external-link"></i></a>
                             </div>
                         </div>
-                        <h3 class="project-title">Hospital Management System (HMS)</h3>
+                        <h3 class="project-title">Hospital Management System</h3>
                         <p class="project-description">
-                            A complete software platform for hospitals and clinics to manage their entire operation digitally, from patient registration to billing and records.
+                            A live platform for Zionahadi. Handles patient registration, doctor appointments, and medical records. Designed with data privacy and efficient retrieval in mind.
                         </p>
-                        <ul class="feature-list">
-                            <li><strong>HIPAA & GDPR Ready:</strong> Built to meet strict international data privacy laws.</li>
-                            <li><strong>Secure Data:</strong> Advanced encryption protects sensitive medical records.</li>
-                            <li><strong>Role-Based Access:</strong> Prevents unauthorized access to information.</li>
-                        </ul>
                         <div class="project-stack">
-                            <span>MongoDB</span>
-                            <span>Express.js</span>
                             <span>React</span>
                             <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Security</span>
                         </div>
                     </div>
 
-                    <!-- Project Card 2: LMS -->
+                    <!-- Project 2: SMS -->
                     <div class="project-card">
                         <div class="project-header">
-                            <i data-feather="folder"></i>
+                            <i data-feather="book-open"></i>
                             <div class="project-links-icon">
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i data-feather="github"></i></a> -->
-                                <a href="#" class="disabled-link" aria-disabled="true"><i data-feather="external-link"></i></a>
+                                <!-- Disabled link icon for internal/in-progress projects -->
+                                <a href="#" style="cursor: not-allowed; opacity: 0.5;"><i data-feather="lock"></i></a>
                             </div>
                         </div>
-                        <h3 class="project-title">Learning Management System (LMS)</h3>
+                        <h3 class="project-title">School Management System</h3>
                         <p class="project-description">
-                            An online platform for creating and taking courses, complete with video lessons, articles, and quizzes, designed for engaging online education.
+                            Currently in development. A comprehensive dashboard for teachers and admins to track student grades (Physics/Chem), attendance, and fee payments.
                         </p>
-                        <p class="project-status-text"><em>(In Progress - Backend Development)</em></p>
+                        <p class="project-status"><em><span class="status-dot"></span> In Progress</em></p>
                         <div class="project-stack">
-                            <span>Python</span>
-                            <span>TypeScript</span>
-                            <span>React</span>
+                            <span>Python/Django</span>
                             <span>PostgreSQL</span>
+                            <span>Bootstrap</span>
                         </div>
                     </div>
 
-                    <!-- Project Card 3: Basic Network Scanner (Example of a smaller project) -->
+                    <!-- Project 3: Cyber Tool -->
                     <div class="project-card">
                         <div class="project-header">
-                            <i data-feather="folder"></i>
+                            <i data-feather="shield"></i>
                             <div class="project-links-icon">
-                                <a href="https://github.com/maxochieng/network-scanner-py" target="_blank" rel="noopener noreferrer"><i data-feather="github"></i></a>
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i data-feather="external-link"></i></a> -->
+                                <a href="https://jasirimax.github.com" target="_blank"><i data-feather="github"></i></a>
                             </div>
                         </div>
-                        <h3 class="project-title">Python Network Scanner</h3>
+                        <h3 class="project-title">Network Vulnerability Scanner</h3>
                         <p class="project-description">
-                            A command-line tool built with Python for basic network scanning, identifying active hosts and open ports on a given network segment.
+                            A Python-based CLI tool developed during my Cisco Ethical Hacking course. Scans local networks for open ports and identifies basic vulnerabilities.
                         </p>
-                        <p class="project-status-text"><em>(Personal Tool)</em></p>
                         <div class="project-stack">
                             <span>Python</span>
-                            <span>Networking</span>
-                            <span>Scapy</span>
+                            <span>Socket Programming</span>
+                            <span>Nmap</span>
                         </div>
                     </div>
-
-                    <!-- Add more project cards following this structure -->
-
                 </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section container">
-            <h2 class="section-title"><span class="accent-text">03.</span> My Technical Toolkit</h2>
-            <div class="skills-grid">
+            <h2 class="section-title"><span class="accent-text">03.</span> Technical Arsenal</h2>
+            <div class="skills-wrapper">
                 <div class="skill-category">
-                    <h4 class="skill-category-title"><i data-feather="layout"></i> Frontend</h4>
-                    <p class="skill-description">Building intuitive and responsive user interfaces that provide seamless interactions across all devices.</p>
-                    <div class="skill-badges">
-                        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-                        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-                        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-                        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-                        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
-                    </div>
+                    <h3><i data-feather="code"></i> Development</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>React.js & Tailwind CSS</li>
+                        <li>Node.js & Express</li>
+                        <li>Python (Django/Flask)</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
-                    <h4 class="skill-category-title"><i data-feather="server"></i> Backend</h4>
-                    <p class="skill-description">Crafting the robust server-side logic and APIs that power applications, ensuring data integrity and performance.</p>
-                    <div class="skill-badges">
-                        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-                        <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
-                        <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python"/>
-                        <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
-                        <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"/>
-                    </div>
+                    <h3><i data-feather="database"></i> Data & Tools</h3>
+                    <ul>
+                        <li>MongoDB & MySQL</li>
+                        <li>Git & GitHub</li>
+                        <li>Linux (Kali/Ubuntu) Terminal</li>
+                        <li>Postman API Testing</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
-                    <h4 class="skill-category-title"><i data-feather="database"></i> Databases</h4>
-                    <p class="skill-description">Designing and managing efficient database structures for secure and scalable data storage and retrieval.</p>
-                    <div class="skill-badges">
-                        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
-                        <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-                        <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4 class="skill-category-title"><i data-feather="git-pull-request"></i> DevOps & Tools</h4>
-                    <p class="skill-description">Automating development workflows for faster deployment, robust testing, and continuous integration.</p>
-                    <div class="skill-badges">
-                        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-                        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-                        <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=GNU%20Bash&logoColor=white" alt="Bash"/>
-                        <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4 class="skill-category-title"><i data-feather="shield"></i> Cybersecurity & Networking</h4>
-                    <p class="skill-description">Implementing secure coding practices, conducting vulnerability assessments, and managing network infrastructure.</p>
-                    <div class="skill-badges">
-                        <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Networking"/>
-                        <img src="https://img.shields.io/badge/Ethical_Hacking-000000?style=for-the-badge&logo=kali-linux&logoColor=white" alt="Ethical Hacking"/>
-                        <img src="https://img.shields.io/badge/Network_Security-FF7043?style=for-the-badge&logo=wireshark&logoColor=white" alt="Network Security"/>
-                        <img src="https://img.shields.io/badge/Vulnerability_Assessment-7B1FA2?style=for-the-badge&logo=nmap&logoColor=white" alt="Vulnerability Assessment"/>
-                    </div>
+                    <h3><i data-feather="lock"></i> Security & Soft Skills</h3>
+                    <ul>
+                        <li>Cisco Certified Ethical Hacker</li>
+                        <li>Cybersecurity (In Progress)</li>
+                        <li>Team Leadership (Volleyball Coach)</li>
+                        <li>Analytical Problem Solving</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -230,54 +195,30 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section container">
             <p class="small-heading">What's Next?</p>
-            <h2 class="section-title"><span class="accent-text">04.</span> Let's Connect.</h2>
+            <h2 class="section-title"><span class="accent-text">04.</span> Get In Touch</h2>
             <p class="contact-pitch">
-                Whether you have a question, a project idea, or just want to discuss the latest in tech or cybersecurity, my inbox is always open. I'm keen to collaborate on innovative solutions.
+                Whether you need a secure web application, a school management solution, or a disciplined developer for your team, I'm ready to work.
             </p>
-            <a href="mailto:maxoundo@gmail.com" class="btn secondary-btn">Say Hello</a>
-            <div class="contact-social-links">
-                <a href="mailto:maxoundo@gmail.com" aria-label="Email"><i data-feather="mail"></i></a>
-                <a href="https://linkedin.com/in/maxochieng" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-                <a href="https://github.com/maxochieng" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-feather="github"></i></a>
-                <a href="https://twitter.com/0ch1eng" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i data-feather="twitter"></i></a>
+            <a href="mailto:max.o.ochieng@gmail.com" class="btn primary-btn">Say Hello</a>
+            
+            <div class="social-links">
+                <a href="https://github.com/maxochieng" target="_blank"><i data-feather="github"></i></a>
+                <a href="https://linkedin.com/in/maxochieng" target="_blank"><i data-feather="linkedin"></i></a>
+                <a href="mailto:max.o.ochieng@gmail.com"><i data-feather="mail"></i></a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>Designed & Built by Max Ochieng <span class="footer-year">2024</span></p>
-            <p class="footer-credit">Inspired by <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang</a> & <a href="https://jacek.ws/" target="_blank" rel="noopener noreferrer">Jacek Jeznach</a></p>
+            <p>Designed & Built by Max Ochieng</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script>
-        // Feather Icons initialization
         feather.replace();
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Hamburger menu functionality
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-menu li a').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
     </script>
 </body>
 </html>
